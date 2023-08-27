@@ -13,7 +13,7 @@ const About = () => {
             </div>
 
             <div className ="flex">
-              <div className="lg:w-1/3 px-4">
+              <div className="lg:w-1/3 px-4 bg-deep-red">
                 <img src="../src/assets/images/portrait.jpg" 
                 className ="w-full " alt="" />
               </div>

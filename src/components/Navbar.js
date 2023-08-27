@@ -17,8 +17,12 @@ const Navbar = () => {
                                   <PersonIcon /> <span>About</span>
                           </a></li>
 
+                          <li><a href="#about" className="nav-link p-2 bg-cool-gray rounded-full">
+                                  <PersonIcon /> <span>Education</span>
+                          </a></li>
+
                           <li><a href="#portfolio" className="nav-link p-2 bg-cool-gray rounded-full">
-                                  <BusinessCenterIcon /> <span>Experience</span>
+                                  <BusinessCenterIcon /><span>Experience</span>
                           </a></li>
 
                           <li><a href="#resume" className="nav-link p-2 bg-cool-gray rounded-full">
