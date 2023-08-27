@@ -99,7 +99,23 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
-      }
+      },
+      screens: {
+        // Small devices like mobile phones
+        'sm': { 'min': '0px', 'max': '639px' },   
+        
+        // Tablets
+        'md': { 'min': '640px', 'max': '767px' },
+
+        // Laptops and small desktops
+        'lg': { 'min': '768px', 'max': '1023px' }, 
+
+        // Larger desktops
+        'xl': { 'min': '1024px', 'max': '1279px' }, 
+
+        // Custom screen size
+        'xxl': { 'min': '1280px', 'max': '1439px' }, 
+      },
     }
   },
 }
