@@ -102,19 +102,21 @@ module.exports = {
       },
       screens: {
         // Small devices like mobile phones
-        'sm': { 'min': '0px', 'max': '639px' },   
+        'xs': { 'min': '321px', 'max': '575px' },   
+
+        'sm': { 'min': '576px', 'max': '767px' },   
         
         // Tablets
-        'md': { 'min': '640px', 'max': '767px' },
+        'md': { 'min': '768px', 'max': '1023px' },
 
         // Laptops and small desktops
-        'lg': { 'min': '768px', 'max': '1023px' }, 
+        'lg': { 'min': '1024px', 'max': '1279px' }, 
 
         // Larger desktops
-        'xl': { 'min': '1024px', 'max': '1279px' }, 
+        'xl': { 'min': '1280px', 'max': '1535px' }, 
 
         // Custom screen size
-        'xxl': { 'min': '1280px', 'max': '1439px' }, 
+        '2xl': { 'min': '1536px' }, 
       },
     }
   },

@@ -7,11 +7,21 @@ import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 
 const Navbar = () => {
   return (
-          <nav id="navbar" className="navbar nav-menu">
-                  <ul>
-                          <li><a href="#hero" className="nav-link m-2 p-2 bg-cool-gray rounded-full active">
-                                  <HomeIcon /> <span>Home</span>
-                          </a></li>
+
+          <nav id="navbar" className="navbar nav-menu p-0 m-0 block list-none">
+                  <ul className='list-none'>
+                          <li className='relative flex-nowrap'>
+                                  <a href="#hero" className="nav-link flex items-center 
+                                  text-gray-dark text-sm bg-gray-light
+                                  p-2 m-0.5 mb-2 h-14 w-full rounded-full
+                                   transition duration-300 overflow-hidden
+                                   md:p-3 md:m-1
+                                   hover:">
+                                        <div className='text-xl'>
+                                                <HomeIcon /> <span className='pl-1 pr-2'>Home</span>
+                                        </div>
+                                </a>
+                          </li>
 
                           <li><a href="#about" className="nav-link p-2 bg-cool-gray rounded-full">
                                   <PersonIcon /> <span>About</span>

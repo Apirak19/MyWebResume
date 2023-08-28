@@ -17,15 +17,19 @@ import Skills from './components/Skills';
 
 function App() {
   return (
-    <div className="App box-border m-0 p-0">
-
-  <header id="header">
+    <div className="App">
+      <h1 className='lg:hidden xl:hidden 2xl:hidden'>menu button</h1>
+      {/* neeeeeeeeeeeeeeeeeeeeeeeeeed to be fixed */}
+      <header className='fixed top-0 left-0 bottom-0 z-9997 transition-all duration-500 p-15 overflow-y-auto
+          md:w-72 md:-left-72
+          sm:w-72 sm:-left-72
+          xs:w-72 xs:-left-72'>
     <Navbar />
-  </header>
 
+
+      </header>
     <Home />
-      
-    <main id="main">
+    <main id="main" className='lg:ml-72 xl:ml-24'>
 
     <About />
 
