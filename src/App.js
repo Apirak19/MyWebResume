@@ -21,34 +21,28 @@ function App() {
       <h1 className='lg:hidden xl:hidden 2xl:hidden'>menu button</h1>
       {/* neeeeeeeeeeeeeeeeeeeeeeeeeed to be fixed */}
       <header className='fixed top-0 left-0 bottom-0 z-9997 transition-all duration-500 p-15 overflow-y-auto
-          md:w-72 md:-left-72
-          sm:w-72 sm:-left-72
-          xs:w-72 xs:-left-72'>
-    <Navbar />
+      md:w-72 md:-left-72
+      sm:w-72 sm:-left-72
+      xs:w-72 xs:-left-72'>
 
+        <Navbar />
 
       </header>
-    <Home />
-    <main id="main" className='lg:ml-72 xl:ml-24'>
+      <Home />
+      <main id="main" className='lg:ml-40 xl:ml-24 2xl:ml-24 border-4 border-red'>
 
-    <About />
+        <About />
 
-    <Education />
+        <Education />
 
-    <Experience />
+        <Experience />
 
-    <Skills />
-
-
-
-
-       
-
+        <Skills />
       </main>
 
 
       <footer id="footer">
-        <div className ="container">
+        <div className="container">
           <div className="social-links">
             <a href="/" className="twitter"><TwitterIcon /></a>
             <a href="/" className="facebook"><FacebookIcon /></a>
@@ -56,7 +50,7 @@ function App() {
             <a href="/" className="google-plus"><GitHubIcon /></a>
             <a href="/" className="linkedin"><LinkedInIcon /></a>
           </div>
-          <div className ="copyright">
+          <div className="copyright">
             Thank you for visiting
           </div>
         </div>

@@ -6,45 +6,35 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 
 const Navbar = () => {
-  return (
+        const list = [{
+                title: 'Home',
+        }]
+        return (
 
-          <nav id="navbar" className="navbar nav-menu p-0 m-0 block list-none">
-                  <ul className='list-none'>
-                          <li className='relative flex-nowrap'>
-                                  <a href="#hero" className="nav-link flex items-center 
+                <nav id="navbar" className="navbar nav-menu pr-2 m-0 block list-none ">
+                        <ul className=''>
+                                <li className='relative flex-nowrap'>
+                                        <a href="#hero" className="nav-link group flex items-center 
                                   text-gray-dark text-sm bg-gray-light
-                                  p-2 m-0.5 mb-2 h-14 w-full rounded-full
+                                  p-2 m-1 mb-2 h-14 w-full rounded-full
                                    transition duration-300 overflow-hidden
-                                   md:p-3 md:m-1
-                                   hover:">
-                                        <div className='text-xl'>
-                                                <HomeIcon /> <span className='pl-1 pr-2'>Home</span>
-                                        </div>
-                                </a>
-                          </li>
+                                   md:p-3 md:m-1 md:w-14
+                                   lg:p-3 lg:m-1 lg:w-14
+                                   xl:p-3 xl:m-1 xl:w-14
+                                   2xl:p-3 2xl:m-1 2xl:w-14
+                                   hover:text-white hover:bg-true-gray hover:w-full">
+                                                <HomeIcon sx={{ fontSize: '2rem' }} />
+                                                <span className='pl-1 pr-2 text-xl 
+                                          group-hover:text-white group-hover:block
+                                          md:hidden lg:hidden xl:hidden 2xl:hidden'>
+                                                        Home
+                                                </span>
+                                        </a>
+                                </li>
 
-                          <li><a href="#about" className="nav-link p-2 bg-cool-gray rounded-full">
-                                  <PersonIcon /> <span>About</span>
-                          </a></li>
-
-                          <li><a href="#about" className="nav-link p-2 bg-cool-gray rounded-full">
-                                  <PersonIcon /> <span>Education</span>
-                          </a></li>
-
-                          <li><a href="#portfolio" className="nav-link p-2 bg-cool-gray rounded-full">
-                                  <BusinessCenterIcon /><span>Experience</span>
-                          </a></li>
-
-                          <li><a href="#resume" className="nav-link p-2 bg-cool-gray rounded-full">
-                                  <BuildIcon /> <span>Skills</span>
-                          </a></li>
-
-                          <li><a href="#services" className="nav-link p-2 bg-cool-gray rounded-full">
-                                  <EmojiEventsIcon /> <span>Achievements</span>
-                          </a></li>
-                  </ul>
-          </nav>
-  )
+                        </ul>
+                </nav>
+        )
 }
 
 export default Navbar
