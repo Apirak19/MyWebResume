@@ -21,7 +21,7 @@ const About = () => {
               <div className="lg:w-1/3 pt-4 lg:pt-0">
                 <h3>Web Developer.</h3>
                 <p className="italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.
                 </p>
 
                 <div className ="flex">
