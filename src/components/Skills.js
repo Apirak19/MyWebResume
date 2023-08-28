@@ -12,68 +12,37 @@ const Skills = () => {
     </div>
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 skills-content">
+      <div className="w-1/3 p-5 m-5 bg-light-yellow rounded-xl border-4 flex flex-col justify-center items-center">
 
-     {/* HTML */}
-     <div className="w-1/3 rounded-full p-5 bg-blue-accent">
-         <div className="skill-detail flex justify-between">
-            <h1>Icon</h1>
-            <div className="">
-               <h1>Skill1</h1>
-               <p>Detail of skill</p>
+         <div className='skill-detail flex justify-between items-center w-full'>
+            <img className="skill-icon bg-black rounded-full w-32 h-32 m-2" src='/src/assets/images/portrait.jpg'/>
+            <div className="skill-text">
+               <div className="">
+                  <h1>Skill1</h1>
+                  <p>Detail of skill</p>
+               </div>
             </div>
          </div>
-         <div className="skill-gauge bg-gray w-1/2">
+         
+         <div className="skill-gauge w-[95%] flex justify-center items-center ">
+            <div className='bg-cool-gray relative h-4 w-full rounded-2xl mx-2'>
+               <div className='bg-light-blue-accent absolute top-0 left-0 flex h-full w-1/2 items-center justify-center rounded-2xl text-xs font-semibold text-white'>
+               </div>
+            </div>
+            <p className='text-red mx-2'>100%</p>
          </div>
-     </div>
+      </div>
+      </div>
 
+             
      {/* CSS */}
-     here is pasted
-             <div className='w-full px-4 lg:w-5/12'>
-                <div className='mb-12'>
-                   <div className='bg-light relative h-[10px] w-full rounded-2xl'>
-                      <div className='bg-primary absolute top-0 left-0 h-full w-1/2 rounded-2xl'>
-                         <span className='bg-primary absolute -right-4 bottom-full mb-2 rounded-sm py-1 px-2 text-xs font-semibold text-white'>
-                            <span className='bg-primary absolute bottom-[-2px] left-1/2 -z-10 h-2 w-2 -translate-x-1/2 rotate-45 rounded-sm'></span>
-                            50%
-                         </span>
-                      </div>
-                   </div>
-                </div>
-                <div className='mb-12'>
-                   <div className='bg-light relative h-[10px] w-full rounded-2xl'>
-                      <div className='bg-primary absolute top-0 left-0 h-full w-[75%] rounded-2xl'>
-                         <span className='bg-primary absolute -right-4 bottom-full mb-2 rounded-sm py-1 px-2 text-xs font-semibold text-white'>
-                            <span className='bg-primary absolute bottom-[-2px] left-1/2 -z-10 h-2 w-2 -translate-x-1/2 rotate-45 rounded-sm'></span>
-                            75%
-                         </span>
-                      </div>
-                   </div>
-                </div>
-                <div className='mb-12'>
-                   <div className='bg-light relative h-[10px] w-full rounded-2xl'>
-                      <div className='bg-primary absolute top-0 left-0 h-full w-[90%] rounded-2xl'>
-                         <span className='bg-primary absolute -right-4 bottom-full mb-2 rounded-sm py-1 px-2 text-xs font-semibold text-white'>
-                            <span className='bg-primary absolute bottom-[-2px] left-1/2 -z-10 h-2 w-2 -translate-x-1/2 rotate-45 rounded-sm'></span>
-                            90%
-                         </span>
-                      </div>
-                   </div>
-                </div>
-             </div>
-
-     {/* JavaScript */}
-     
-
-     {/* PHP */}
-     
-
+        
      {/* WordPress/CMS */}
      
 
      {/* Photoshop */}
      
 
-    </div>
    </div>
   </section>
  );

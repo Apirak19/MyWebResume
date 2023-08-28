@@ -52,11 +52,6 @@ const About = () => {
                       </li>
 
                       <li>
-                        <i className ="bi bi-chevron-right"></i> <strong>Email:</strong> 
-                        <span>email@example.com</span>
-                      </li>
-
-                      <li>
                         <ChevronRightIcon /> <strong>Website:</strong>
                         <span>www.example.com</span>
                       </li>

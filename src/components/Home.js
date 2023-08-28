@@ -15,11 +15,11 @@ const Home = () => {
                           <h1>Apirak Fakin</h1>
                           <p>I'm <span className="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
                           <div className="social-links">
-                                  <a href="#" className="twitter"><TwitterIcon /></a>
-                                  <a href="#" className="facebook"><FacebookIcon /></a>
-                                  <a href="#" className="instagram"><InstagramIcon /></a>
-                                  <a href="#" className="google-plus"><GitHubIcon /></a>
-                                  <a href="#" className="linkedin"><LinkedInIcon /></a>
+                                  <a href="/" className="twitter"><TwitterIcon /></a>
+                                  <a href="/" className="facebook"><FacebookIcon /></a>
+                                  <a href="/" className="instagram"><InstagramIcon /></a>
+                                  <a href="/" className="google-plus"><GitHubIcon /></a>
+                                  <a href="/" className="linkedin"><LinkedInIcon /></a>
                           </div>
                   </div>
           </section>
