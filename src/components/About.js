@@ -3,7 +3,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 const About = () => {
   return (
-    <section id="about" className ="about">
+    <section id="about" className ="about border-blue border-4">
           <div className ="container" 
           // data-aos="fade-up"
           >
