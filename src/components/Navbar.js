@@ -14,27 +14,27 @@ const Navbar = () => {
     {
       title: "Home",
       icon: <HomeIcon sx={{ fontSize: "2rem" }} />,
-      link: '#Home'
+      link: "#Home",
     },
     {
       title: "About",
       icon: <PersonIcon sx={{ fontSize: "2rem" }} />,
-      link: '#About'
+      link: "#About",
     },
     {
       title: "Education",
       icon: <SchoolIcon sx={{ fontSize: "2rem" }} />,
-      link: '#Education'
+      link: "#Education",
     },
     {
       title: "Experience",
       icon: <BusinessCenterIcon sx={{ fontSize: "2rem" }} />,
-      link: '#Experience'
+      link: "#Experience",
     },
     {
       title: "Skills",
       icon: <BuildIcon sx={{ fontSize: "2rem" }} />,
-      link: '#Skills'
+      link: "#Skills",
     },
   ];
   return (
@@ -42,8 +42,11 @@ const Navbar = () => {
       className={` fixed top-0 left-0 bottom-0 z-48 p-15 w-48
         flex flex-col justify-center
         transition-all duration-500 overflow-hidden
-        ${showNav ? "sm:w-72 xs:w-72"
-        : "sm:w-0 sm:bg-white sm:shadow-2xl xs:w-0 xs:bg-white xs:shadow-2xl"} 
+        ${
+          showNav
+            ? "sm:w-72 xs:w-72"
+            : "sm:w-0 sm:bg-white sm:shadow-2xl xs:w-0 xs:bg-white xs:shadow-2xl"
+        } 
        xs:bg-white xs:shadow-2xl`}
     >
       <div
@@ -61,7 +64,7 @@ const Navbar = () => {
                     href={item.link}
                     className="nav-link group flex items-center 
                         text-gray-dark text-sm bg-gray-light
-                        p-2 m-1 mb-2 h-14 w-full rounded-full z-49
+                        p-2 ml-2 mr-5 mb-2 h-14 w-full rounded-full z-49 border-4
                         transition duration-300 overflow-hidden
                         md:p-3 md:m-1 md:w-14
                         lg:p-3 lg:m-1 lg:w-14
@@ -71,9 +74,10 @@ const Navbar = () => {
                   >
                     {item.icon}
                     <span
-                      className={`'pl-1 pr-2 text-xl 
+                      className={`'ml-2 pr-2 text-xl hidden
+                      xs:block sm:block
                                           group-hover:text-white group-hover:block
-                                          md:hidden lg:hidden xl:hidden 2xl:hidden'
+                                          '
                                           `}
                     >
                       {item.title}

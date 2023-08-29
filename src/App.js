@@ -22,13 +22,13 @@ function App() {
   return (
     <UseStateProvider>
       <div className="App">
-        <head>
+        <aside>
         <MenuButton />
         <Navbar />
-        </head>
+        </aside>
 
         <Home />
-        
+
         <main
           id="main"
           className="md:ml-40 lg:ml-40 xl:ml-40 2xl:ml-40 border-4 border-red"

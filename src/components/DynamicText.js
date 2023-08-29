@@ -6,10 +6,10 @@ const DynamicText = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setTypeIndex((prevIndex) => (prevIndex + 1) % typeItem.length);
-    }, 3000);
+    }, 1000);
     return () => clearInterval(interval);
   });
-  return <p> {typeItem[typeIndex]}</p>;
+  return <p className="text-5xl p-5"> {typeItem[typeIndex]}</p>;
 };
 
 export default DynamicText;
