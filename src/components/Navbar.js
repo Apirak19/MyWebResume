@@ -64,7 +64,7 @@ const Navbar = () => {
                     href={item.link}
                     className="nav-link group flex items-center 
                         text-gray-dark text-sm bg-gray-light
-                        p-2 ml-2 mr-5 mb-2 h-14 w-full rounded-full z-49 border-4
+                        p-2 ml-2 mr-5 mb-2 h-14 w-full rounded-full z-49
                         transition duration-300 overflow-hidden
                         md:p-3 md:m-1 md:w-14
                         lg:p-3 lg:m-1 lg:w-14
@@ -74,10 +74,9 @@ const Navbar = () => {
                   >
                     {item.icon}
                     <span
-                      className={`'ml-2 pr-2 text-xl hidden
-                      xs:block sm:block
-                                          group-hover:text-white group-hover:block
-                                          '
+                      className={`'mx-5 pr-2 text-xl hidden
+                      xs:block sm:block group-hover:text-white group-hover:block
+                                          '   
                                           `}
                     >
                       {item.title}

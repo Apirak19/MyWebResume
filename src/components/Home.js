@@ -12,48 +12,50 @@ const Home = () => {
     {
       title: "Facebook",
       link: "https://www.facebook.com/",
-      icon: <FacebookIcon sx={{ fontSize: "3rem" }}/>,
+      icon: <FacebookIcon sx={{ fontSize: "3rem" }} />,
     },
     {
       title: "Instragam",
       link: "https://www.instragam.com/",
-      icon: <InstagramIcon sx={{ fontSize: "3rem" }}/>,
+      icon: <InstagramIcon sx={{ fontSize: "3rem" }} />,
     },
     {
       title: "Twitter(X)",
       link: "https://www.twitter.com/",
-      icon: <TwitterIcon sx={{ fontSize: "3rem" }}/>,
+      icon: <TwitterIcon sx={{ fontSize: "3rem" }} />,
     },
     {
       title: "GitHub",
       link: "https://github.com/Apirak19",
-      icon: <GitHubIcon sx={{ fontSize: "3rem" }}/>,
+      icon: <GitHubIcon sx={{ fontSize: "3rem" }} />,
     },
     {
       title: "Linkedin",
       link: "https://www.linkedin.com/",
-      icon: <LinkedInIcon sx={{ fontSize: "3rem" }}/>,
+      icon: <LinkedInIcon sx={{ fontSize: "3rem" }} />,
     },
   ];
   return (
-    <section id="Home" className="flex flex-col justify-center w-full h-screen">
-      
-        <h1 className="text-5xl font-bold text-gray-dark p-5">
-          Apirak Fakin
-        </h1>
-        
-        <DynamicText />
+    <section
+      id="Home"
+      className="flex flex-col justify-center w-full h-screen overflow-hidden py-16 px-0 "
+    >
+      <DynamicText />
 
-        <div className="social-links flex justify-center p-5">
-          {socialLink.map((item) => {
-            return (
-              <a href={item.link} className="twitter">
-                {item.icon}
-              </a>
-            );
-          })}
-        </div>
-      
+      <div className="home-contacts">
+      <h1 className="text-5xl font-bold text-gray-dark p-5">Apirak Fakin</h1>
+
+      <div className="social-links flex justify-center p-5">
+        {socialLink.map((item) => {
+          return (
+            <a href={item.link} className="twitter">
+              {item.icon}
+            </a>
+          );
+        })}
+      </div>
+
+      </div>
     </section>
   );
 };
