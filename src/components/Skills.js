@@ -3,7 +3,7 @@ import Skillbar from './Skillbar';
 
 const Skills = () => {
    return (
-      <section id="skills" className="skills section-bg w-full border-4 border-red m-0 p-0">
+      <section id="Skills" className="skills section-bg w-full border-4 border-red m-0 p-0">
          <div className="container w-full border-4 border-blue m-0"
          // data-aos="fade-up"
          >

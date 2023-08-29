@@ -2,7 +2,7 @@ import React from 'react'
 
 const Experience = () => {
 return (
-<section id="resume" className="resume" >
+<section id="Experience" className="resume" >
         <div
         className="bg-cover bg-center h-64 md:bg-contain md:bg-right"
         style={{
