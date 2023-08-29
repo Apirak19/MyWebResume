@@ -102,7 +102,7 @@ module.exports = {
       },
       screens: {
         // Small devices like mobile phones
-        'xs': { 'min': '321px', 'max': '575px' },   
+        'xs': { 'max': '575px' },   
 
         'sm': { 'min': '576px', 'max': '767px' },   
         
