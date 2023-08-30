@@ -31,7 +31,9 @@ function App() {
 
         <main
           id="main"
-          className={`md:pl-20 lg:pl-20 xl:pl-20 2xl:pl-20 border-4 border-red`}
+          className="
+          
+          border-4 border-red"
         >
 
           <About />

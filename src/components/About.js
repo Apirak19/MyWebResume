@@ -30,33 +30,53 @@ const About = () => {
   return (
     <section
       id="About"
-      className="about w-full overflow-hidden py-2 px-0 border-4 border-blue"
+      className={`section w-full overflow-hidden px-0 pt-10
+      ${screenWidth > 768 ? "pl-20 " : "pl-0"}
+      bg-gradient-to-b from-cyan to-deep-green
+      `}
     >
-      <div className="w-full">
-          <h2 className="text-5xl font-bold uppercase my-5">About</h2>
-
+      <h2 className="section-title text-5xl text-white font-bold uppercase pt-5">
+        About
+      </h2>
+      <div
+        className="section-bg m-5 p-5 rounded-xl shadow-2xl 
+        flex flex-col justify-center items-center
+        bg-white "
+      >
         <div
-          className={`grid grid-rows-1 grid-cols-3 text-start mt-16
-        ${screenWidth < 786 ? "flex flex-col" : ""} `}
+          className={`content-type text-start w-full
+        ${
+          screenWidth < 1100 ? "flex flex-col" : "grid grid-rows-1 grid-cols-3"
+        }`}
         >
-          <div className="row-span-1 col-span-1">
+          <div className="row-span-1 col-span-1 w-full">
             <img src="images/portrait.jpg" className="w-full " alt="img" />
           </div>
 
-          <div className="row-span-1 col-span-2">
-            <h3 className="text-4xl font-bold text-true-gray uppercase px-10">
+          <div className="text-content row-span-1 col-span-2">
+            <h3
+              className={`text-4xl font-bold text-true-gray uppercase px-5 pb-3
+            ${screenWidth < 1100 ? " text-center mt-5" : ""}
+            ${screenWidth < 410 ? "text-2xl text-center mt-5" : ""}`}
+            >
               Web Developer
             </h3>
-            <p className="italic py-3 px-10">
-              Innovative and deadline-driven Graphic Designer with 3+ years of
-              experience designing and developing user-centered digital/print
-              marketing material from initial concept to final, polished
-              deliverable.
+            <p
+              className={`paragraph tracking-tighter
+                        ${screenWidth < 1100 ? "px-0" : "px-5"}
+                        ${screenWidth < 375 ? "text-sm" : "text-base"}`}
+            >
+              A dedicated graduate with a Bachelor of Arts and 3 years of
+              experience as a Foreign Relations Officer.
             </p>
-            <ul>
+            <ul
+              className={`list py-2 tracking-tighter
+            ${screenWidth < 1100 ? "px-0" : "px-10"}
+            ${screenWidth < 375 ? "text-sm" : "text-base"}`}
+            >
               {data1.map((item) => {
                 return (
-                  <li className="pt-1 px-10">
+                  <li className="">
                     <ChevronRightIcon />
                     <span className="font-extrabold">{item.title}</span>
                     <span>{item.content}</span>
@@ -64,14 +84,14 @@ const About = () => {
                 );
               })}
             </ul>
-            <p className="py-3 px-10">
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio
-              vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor
-              incidunt officia tempore. Et eius omnis. Cupiditate ut dicta
-              maxime officiis quidem quia. Sed et consectetur qui quia
-              repellendus itaque neque. Aliquid amet quidem ut quaerat
-              cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium
-              dolores.
+            <p
+              className={`paragraph tracking-tighter
+            ${screenWidth < 1100 ? "px-0" : "px-5"}
+            ${screenWidth < 375 ? "text-sm" : "text-base"}`}
+            >
+              Driven by a passion for technology, I seek to leverage my
+              problem-solving skills and international communication expertise
+              and contribute to a collaborative and dynamic workplace
             </p>
           </div>
         </div>

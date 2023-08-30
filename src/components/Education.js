@@ -1,168 +1,103 @@
-import React from "react";
+import React, { useContext } from "react";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { UseStateContext } from "../contexts/ContextProvider";
 
 const Education = () => {
+  const { screenWidth } = useContext(UseStateContext);
   const eduData = [
     {
-      title: "Silpakorn University",
-      program: "Bachelor of Arts",
-      subject:
-        "Faculty of Arts: English Major, Information and Technology Minor",
+      name: "Silpakorn University",
+      gradYear: "(2017-2020)",
+      grad: "Bachelor of Arts",
+      major: "English Major",
+      minor: "Information and Technology Minor",
       gpa: "3.21",
+      img: "images/SU.png",
     },
     {
-      title: "Phrapathom Witthayalai School",
-      program: "Highshool",
-      subject: "Mathematic and Science Program",
-      gpa: "3.55",
+      name: "Phrapathom Witthayalai School",
+      gradYear: "(2012-2017)",
+      grad: "High School Diploma",
+      major: "Science and Mathematics Program",
+      gpa: "3.39",
+      img: "images/PT.png",
     },
   ];
   return (
     <section
       id="Education"
-      className="Education w-full overflow-hidden py-2 px-0 border-4 border-blue"
+      className={`section w-full overflow-hidden px-0 pt-10
+      ${screenWidth > 768 ? "pl-20 " : "pl-0"}
+      bg-gradient-to-b from-deep-green to-amber
+      `}
     >
-      <div
-        className=""
-        // data-aos="fade-up"
-      >
-        <div className="section-title">
-          <h2 className="text-5xl font-bold uppercase my-5">Education</h2>
-        </div>
+      <h2 className="section-title text-5xl text-white font-bold uppercase pt-5">
+        Education
+      </h2>
 
-        <div className="grid grid-rows-2 grid-cols-2">
-          <div className="row-span-1 col-span-1 text-start">
-            <div className="flex">
-              <ul>
-                <li>
-                  <ChevronRightIcon />
-                  <span className="font-extrabold">Bachelor of Arts</span>
-                </li>
-                <li>
-                  <ChevronRightIcon />
-                  <span className="font-extrabold">Silpakorn University</span>
-                </li>
-                <li>
-                  <ChevronRightIcon />
-                  <span className="font-extrabold">Faculty of Arts: English Major, Information and Technology Minor</span>
-                </li>
-                <li>
-                  <ChevronRightIcon />
-                  <span className="font-extrabold">Silpakorn University</span>
-                </li>
-              </ul>
-            </div>
+      {eduData.map((item) => {
+        return (
+          <div
+            className="section-bg m-5 p-5 rounded-xl shadow-2xl 
+          flex flex-col justify-center items-center
+          bg-white "
+          >
+            <div
+              className={`content  w-full
+          ${
+            screenWidth < 1100
+              ? "flex flex-col-reverse justify-center"
+              : "grid grid-cols-2"
+          }`}
+            >
+              <div
+                className={`text-format
+                ${
+                  screenWidth < 1100
+                    ? "flex flex-col items-center justify-center"
+                    : "row-span-1 col-span-1 w-full"
+                }`}
+              >
+                <div
+                  className={`text-content flex flex-col items-start`}
+                >
+                  <h3
+                    className={`text-2xl font-bold text-true-gray uppercase px-5 pb-3
+                  ${screenWidth < 1100 ? " text-center mt-5" : ""}
+                  ${screenWidth < 410 ? "text-2xl text-center mt-5" : ""}`}
+                  >
+                    {item.name}
+                  </h3>
 
-            <div className="flex">
-              <div className="lg:w-1/2">
-                <ul>
-                  <li>
-                    <ChevronRightIcon /> <strong>Birthday:</strong>
-                    <span>February 19, 1998</span>
-                  </li>
+                  <p className="font-extrabold">{item.gradYear}</p>
 
-                  <li>
-                    <ChevronRightIcon /> <strong>Age:</strong>
-                    <span>25</span>
-                  </li>
+                  <p className="font-extrabold">{item.grad}</p>
 
-                  <li>
-                    <ChevronRightIcon /> <strong>City:</strong>
-                    <span>Nakhon Pathom, Thailand</span>
-                  </li>
+                  <p className="font-extrabold">{item.major}</p>
 
-                  <li>
-                    <ChevronRightIcon /> <strong>City:</strong>
-                    <span>Nakhon Pathom, Thailand</span>
-                  </li>
-                </ul>
+                  <p className="font-extrabold">{item.minor}</p>
+
+                  <p className="font-extrabold">{item.gpa}</p>
+                </div>
+              </div>
+              <div
+                className={` 
+              ${
+                screenWidth < 1100
+                  ? "self-center"
+                  : "row-span-1 col-span-1 w-full"
+              }`}
+              >
+                <img
+                  src={item.img}
+                  className="w-2/3 rounded-full shadow-2xl m-5"
+                  alt=""
+                />
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="flex">
-          <div className="lg:w-1/3 pt-4 lg:pt-0">
-            <h3>Silpakorn University</h3>
-            <div className="flex">
-              <div className="lg:w-1/2">
-                <ul>
-                  <li>
-                    <ChevronRightIcon /> <strong>Birthday:</strong>
-                    <span>February 19, 1998</span>
-                  </li>
-
-                  <li>
-                    <ChevronRightIcon /> <strong>Age:</strong>
-                    <span>25</span>
-                  </li>
-
-                  <li>
-                    <ChevronRightIcon /> <strong>City:</strong>
-                    <span>Nakhon Pathom, Thailand</span>
-                  </li>
-
-                  <li>
-                    <ChevronRightIcon /> <strong>City:</strong>
-                    <span>Nakhon Pathom, Thailand</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="lg:w-1/3 px-4 bg-deep-red">
-            <img
-              src="../src/assets/images/portrait.jpg"
-              className="w-full "
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-
-      <div
-        className=""
-        // data-aos="fade-up"
-      >
-        <div className="flex">
-          <div className="lg:w-1/3 px-4 bg-deep-red">
-            <img
-              src="../src/assets/images/portrait.jpg"
-              className="w-full "
-              alt=""
-            />
-          </div>
-          <div className="lg:w-1/3 pt-4 lg:pt-0">
-            <h3>Phrapathom Witthayalai School</h3>
-            <div className="flex">
-              <div className="lg:w-1/2">
-                <ul>
-                  <li>
-                    <ChevronRightIcon /> <strong>Birthday:</strong>
-                    <span>February 19, 1998</span>
-                  </li>
-
-                  <li>
-                    <ChevronRightIcon /> <strong>Age:</strong>
-                    <span>25</span>
-                  </li>
-
-                  <li>
-                    <ChevronRightIcon /> <strong>City:</strong>
-                    <span>Nakhon Pathom, Thailand</span>
-                  </li>
-
-                  <li>
-                    <ChevronRightIcon /> <strong>City:</strong>
-                    <span>Nakhon Pathom, Thailand</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        );
+      })}
     </section>
   );
 };

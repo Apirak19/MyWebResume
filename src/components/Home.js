@@ -38,12 +38,15 @@ const Home = () => {
   return (
     <section
       id="Home"
-      className="flex flex-col justify-center w-full h-screen overflow-hidden py-16 px-0 "
+      className="flex flex-col justify-center w-full h-screen overflow-hidden py-16 px-0 bg-gradient-to-b from-teal-accent to-cyan
+      "
     >
       <DynamicText />
+       
+      <h1 className="text-3xl font-bold text-gray-dark py-10">by</h1>
 
       <div className="home-contacts">
-      <h1 className="text-5xl font-bold text-gray-dark p-5">Apirak Fakin</h1>
+      <h1 className="text-5xl font-bold text-black p-5">Apirak Fakin</h1>
 
       <div className="social-links flex justify-center p-5">
         {socialLink.map((item) => {
