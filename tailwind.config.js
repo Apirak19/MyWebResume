@@ -91,6 +91,7 @@ module.exports = {
     fontFamily: {
       sans: ["Graphik", "sans-serif"],
       serif: ["Merriweather", "serif"],
+      'mono': ['Roboto Mono', 'monospace'],
     },
     extend: {
       spacing: {

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { UseStateProvider } from "./contexts/ContextProvider";
+import React, { useContext, useState } from "react";
+import { UseStateContext, UseStateProvider } from "./contexts/ContextProvider";
 
 import "./App.css";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -21,7 +21,7 @@ import Skills from "./components/Skills";
 function App() {
   return (
     <UseStateProvider>
-      <div className="App">
+      <div className="App font-mono box-border">
         <aside>
         <MenuButton />
         <Navbar />
@@ -31,7 +31,7 @@ function App() {
 
         <main
           id="main"
-          className="md:ml-40 lg:ml-40 xl:ml-40 2xl:ml-40 border-4 border-red"
+          className={`md:pl-20 lg:pl-20 xl:pl-20 2xl:pl-20 border-4 border-red`}
         >
 
           <About />
@@ -44,7 +44,7 @@ function App() {
         </main>
 
         <footer id="footer">
-          <div className="container">
+          <div className="">
             <div className="social-links">
               <a href="/" className="twitter">
                 <TwitterIcon />
