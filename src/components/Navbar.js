@@ -36,6 +36,11 @@ const Navbar = () => {
       icon: <BuildIcon sx={{ fontSize: "2rem" }} />,
       link: "#Skills",
     },
+    {
+      title: "Achievements",
+      icon: <EmojiEventsIcon sx={{ fontSize: "2rem" }} />,
+      link: "#Achievements",
+    },
   ];
   return (
     <nav
