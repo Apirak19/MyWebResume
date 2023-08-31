@@ -80,8 +80,8 @@ const Experience = () => {
               </h3>
               <h3
                 className={`text-2xl font-bold text-true-gray uppercase pb-1
-                  ${screenWidth < 1100 ? " text-center mt-5" : ""}
-                  ${screenWidth < 410 ? "text-2xl text-center mt-5" : ""}`}
+                  ${screenWidth < 1100 ? " text-center" : ""}
+                  ${screenWidth < 410 ? "text-2xl text-center" : ""}`}
               >
                 Department of Social Development and Welfare
               </h3>

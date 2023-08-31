@@ -1,9 +1,9 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import Skillbar from "./Skillbar";
 import { UseStateContext } from "../contexts/ContextProvider";
 
 const Skills = () => {
-   const {screenWidth} = useContext(UseStateContext)
+  const { screenWidth } = useContext(UseStateContext);
   return (
     <section
       id="Skills"
@@ -12,14 +12,12 @@ const Skills = () => {
       bg-gradient-to-b from-deep-amber to-gold
       `}
     >
+      <h2 className="section-title text-5xl text-white font-bold uppercase pt-5">Skills</h2>
       <div
         className="container w-full border-4 border-blue m-0"
         // data-aos="fade-up"
       >
-        <div className="section-title">
-          <h2>Skills</h2>
-          <p>Magnam dolores commodi suscipit...</p>
-        </div>
+        
         <Skillbar />
         <Skillbar />
         <Skillbar />
