@@ -10,7 +10,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 // header
 import MenuButton from "./components/MenuButton";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar copy";
 import Home from "./components/Home";
 import About from "./components/About";
 import Education from "./components/Education";

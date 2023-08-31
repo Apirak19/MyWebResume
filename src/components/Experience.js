@@ -1,68 +1,104 @@
-import React from "react";
+import React, { useContext } from "react";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { UseStateContext } from "../contexts/ContextProvider";
 
 const Experience = () => {
-  const text = [
+  const { screenWidth } = useContext(UseStateContext);
+  const workRes = [
     {
-      title: `Lead in the design, development, and implementation of the graphic,
-  layout, and production communication materials`,
+      content: `Facilitate effective coordination among teams and departments`,
     },
     {
-      title: ` Delegate tasks to the 7 members of the design team and provide
-      counsel on all aspects of the project.`,
+      content: `Maintain a comprehensive database containing data and activities related to foreign affairs`,
     },
     {
-      title: `Supervise the assessment of all graphic materials in order to ensure
-      quality and accuracy of the design`,
+      content: `Perform accurate translation of written materials from Thai to English and vice versa`,
     },
     {
-      title: `Oversee the efficient use of production project budgets ranging from
-      $2,000 - $25,000`,
+      content: `Summarize minutes of meetings involving international collaboration`,
+    },
+    {
+      content: `Prepare relevant materials for cooperative negotiations with foreign countries`,
     },
   ];
   return (
     <section
       id="Experience"
-      className="w-full overflow-hidden py-16 px-0
-      md:pl-20 lg:pl-20 xl:pl-20 2xl:pl-20
-      bg-gradient-to-b from-amber to-deep-amber"
+      className={`section w-full overflow-hidden px-0 pt-10
+      ${screenWidth > 768 ? "pl-20 " : "pl-0"}
+      bg-gradient-to-b from-amber to-deep-amber
+      `}
     >
       <h2 className="section-title text-5xl text-white font-bold uppercase pt-5">
         Experience
       </h2>
 
       <div
-        className="mt-5 mx-5 mb-5 pb-5 rounded-xl shadow-2xl flex justify-center 
-      sm:flex-col xs:flex-col items-center bg-white "
+        className="section-bg m-5 p-5 rounded-xl shadow-2xl 
+          flex flex-col justify-center items-center
+          bg-white "
       >
-        <div className="text-start">
-          <div className="text-4xl font-bold text-gray-dark">
-            <h1 className="">Foreign Relation Officer</h1>
-            <h1>(2020-present)</h1>
+        <div
+          className={`content  w-full
+          ${
+            screenWidth < 1100
+              ? "flex flex-col-reverse justify-center"
+              : "grid grid-cols-3"
+          }`}
+        >
+          <div
+            className={` 
+              ${
+                screenWidth < 1100
+                  ? "self-center"
+                  : "row-span-1 col-span-1 w-full"
+              }`}
+          >
+            <img
+              src="/images/dsdw-logo.jpg"
+              className="w-2/3 rounded-full shadow-2xl m-5"
+              alt=""
+            />
           </div>
-          <p>
-            <ChevronRightIcon />
-            Facilitate effective coordination among teams and departments
-          </p>
-          <p>
-            <ChevronRightIcon />
-            Maintain a comprehensive database containing data and activities
-            related to foreign affairs
-          </p>
-          <p>
-            <ChevronRightIcon />
-            Perform accurate translation of written materials from Thai to
-            English and vice versa
-          </p>
-          <p>
-            <ChevronRightIcon />
-            Summarize minutes of meetings involving international collaboration
-          </p>
-          <p>
-            <ChevronRightIcon />
-            Prepare relevant materials for cooperative negotiations with foreign
-            countries.
-          </p>
+          <div
+            className={`text-format
+                ${
+                  screenWidth < 1100
+                    ? "flex flex-col items-center justify-center"
+                    : "row-span-1 col-span-2 w-full"
+                }`}
+          >
+            <div
+              className={`text-content h-full flex flex-col items-start justify-center `}
+            >
+              <h3
+                className={`text-2xl font-bold text-true-gray uppercase pb-1
+                  ${screenWidth < 1100 ? " text-center mt-5" : ""}
+                  ${screenWidth < 410 ? "text-2xl text-center mt-5" : ""}`}
+              >
+                Foreign Relation Officer
+              </h3>
+              <h3
+                className={`text-2xl font-bold text-true-gray uppercase pb-1
+                  ${screenWidth < 1100 ? " text-center mt-5" : ""}
+                  ${screenWidth < 410 ? "text-2xl text-center mt-5" : ""}`}
+              >
+                Department of Social Development and Welfare
+              </h3>
+              <h3 className="text-2xl font-bold text-gray-dark mb-3">
+                (2020-present)
+              </h3>
+
+              {workRes.map((item) => {
+                return (
+                  <p className="text-base text-start">
+                    <ChevronRightIcon />
+                    {item.content}
+                  </p>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </section>

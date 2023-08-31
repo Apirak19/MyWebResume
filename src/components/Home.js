@@ -41,7 +41,7 @@ const Home = () => {
       className="flex flex-col justify-center w-full h-screen overflow-hidden py-16 px-0 bg-gradient-to-b from-teal-accent to-cyan
       "
     >
-      <DynamicText />
+      {/* <DynamicText /> */}
        
       <h1 className="text-3xl font-bold text-gray-dark py-10">by</h1>
 

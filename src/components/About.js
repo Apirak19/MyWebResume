@@ -44,7 +44,7 @@ const About = () => {
         bg-white "
       >
         <div
-          className={`content-type text-start w-full
+          className={`content-type text-start 
         ${
           screenWidth < 1100 ? "flex flex-col" : "grid grid-rows-1 grid-cols-3"
         }`}
@@ -78,7 +78,7 @@ const About = () => {
                 return (
                   <li className="">
                     <ChevronRightIcon />
-                    <span className="font-extrabold">{item.title}</span>
+                    <span className="font-extrabold">{item.title} </span>
                     <span>{item.content}</span>
                   </li>
                 );

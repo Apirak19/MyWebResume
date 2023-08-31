@@ -43,48 +43,18 @@ const Education = () => {
           bg-white "
           >
             <div
-              className={`content  w-full
+              className={`content  w-4/5
           ${
-            screenWidth < 1100
-              ? "flex flex-col-reverse justify-center"
+            screenWidth < 1256
+              ? "flex flex-col justify-center"
               : "grid grid-cols-2"
           }`}
             >
               <div
-                className={`text-format
-                ${
-                  screenWidth < 1100
-                    ? "flex flex-col items-center justify-center"
-                    : "row-span-1 col-span-1 w-full"
-                }`}
-              >
-                <div
-                  className={`text-content flex flex-col items-start`}
-                >
-                  <h3
-                    className={`text-2xl font-bold text-true-gray uppercase px-5 pb-3
-                  ${screenWidth < 1100 ? " text-center mt-5" : ""}
-                  ${screenWidth < 410 ? "text-2xl text-center mt-5" : ""}`}
-                  >
-                    {item.name}
-                  </h3>
-
-                  <p className="font-extrabold">{item.gradYear}</p>
-
-                  <p className="font-extrabold">{item.grad}</p>
-
-                  <p className="font-extrabold">{item.major}</p>
-
-                  <p className="font-extrabold">{item.minor}</p>
-
-                  <p className="font-extrabold">{item.gpa}</p>
-                </div>
-              </div>
-              <div
-                className={` 
+                className={`
               ${
-                screenWidth < 1100
-                  ? "self-center"
+                screenWidth < 1256
+                  ? "flex flex-col items-center justify-center"
                   : "row-span-1 col-span-1 w-full"
               }`}
               >
@@ -93,6 +63,49 @@ const Education = () => {
                   className="w-2/3 rounded-full shadow-2xl m-5"
                   alt=""
                 />
+              </div>
+              <div
+                className={`text-format w-full border-red border-4
+                ${
+                  screenWidth < 1256
+                    ? "flex flex-col items-center justify-center"
+                    : "row-span-1 col-span-1 "
+                }`}
+              >
+                <div
+                  className={`text-content w-full h-full flex flex-col border-4
+                  ${screenWidth < 1256 ? " justify-center" : ""}`}
+                >
+                  <h3
+                    className={`text-2xl font-bold text-true-gray uppercase pb-1
+                  ${screenWidth < 1256 ? " text-center mt-5" : "text-start"}
+                  ${screenWidth < 410 ? "text-2xl text-center mt-5" : ""}`}
+                  >
+                    {item.name}
+                  </h3>
+
+                  <h4
+                    className={`text-2xl font-bold text-true-gray uppercase
+                  ${screenWidth < 1256 ? " text-center" : "text-start"}
+                  ${screenWidth < 410 ? "text-2xl text-center" : ""}`}
+                  >
+                    {item.gradYear}
+                  </h4>
+                  <div
+                    className={`flex flex-col 
+                  ${screenWidth < 1256 ? " justify-center" : "text-start"}
+                  ${screenWidth < 600 ? " text-base" : "text-xl font-extrabold"}
+                  `}
+                  >
+                    <p className="   mt-3">{item.grad}</p>
+
+                    <p className="  ">{item.major}</p>
+
+                    <p className=" ">{item.minor}</p>
+
+                    <p className="  ">GPA: {item.gpa}</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
