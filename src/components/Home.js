@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UseStateContext } from "../contexts/ContextProvider";
 import DynamicText from "./DynamicText";
 
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -8,6 +9,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Home = () => {
+  const { screenWidth } = useContext(UseStateContext);
   const socialLink = [
     {
       title: "Facebook",
@@ -41,17 +43,17 @@ const Home = () => {
       className="flex flex-col justify-center w-full h-screen overflow-hidden py-16 px-0 bg-gradient-to-b from-teal-accent to-cyan
       "
     >
-      {/* <DynamicText /> */}
+      <DynamicText />
        
-      <h1 className="text-3xl font-bold text-gray-dark py-10">by</h1>
+      <h1 className="font-bold text-gray-dark py-10 2xl:text-7xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl">by</h1>
 
       <div className="home-contacts">
-      <h1 className="text-5xl font-bold text-black p-5">Apirak Fakin</h1>
+      <h1 className="font-bold text-black p-5 2xl:text-7xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl">Apirak Fakin</h1>
 
       <div className="social-links flex justify-center p-5">
         {socialLink.map((item) => {
           return (
-            <a href={item.link} className="twitter">
+            <a href={item.link} className="mx-2 cursor-pointer">
               {item.icon}
             </a>
           );

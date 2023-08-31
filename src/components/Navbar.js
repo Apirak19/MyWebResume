@@ -53,13 +53,13 @@ const Navbar = () => {
         } `}
     >
       <div
-        className={` p-15
-        transition-all duration-500  overflow-y-auto
+        className={`
+        transition-all duration-500  overflow-y-auto overflow-x-hidden
         sm:w-50 ${showNav ? "sm:-left-0" : "sm:-left-72"}
         xs:w-50 ${showNav ? "xs:-left-0" : "xs:-left-72"}`}
       >
-        <div id="navbar" className="m-0 block list-none">
-          <ul className={`${screenWidth < 768 ? "m-5" : ""} 
+        <div id="navbar" className="m-0 p-1 block list-none ">
+          <ul className={`p-1 ${screenWidth < 768 ? "m-5" : ""} 
           `}>
             {list.map((item) => {
               return (

@@ -51,7 +51,7 @@ const Education = () => {
           }`}
             >
               <div
-                className={`
+                className={`flex-1
               ${
                 screenWidth < 1256
                   ? "flex flex-col items-center justify-center"
@@ -65,7 +65,7 @@ const Education = () => {
                 />
               </div>
               <div
-                className={`text-format w-full border-red border-4
+                className={`text-format w-full
                 ${
                   screenWidth < 1256
                     ? "flex flex-col items-center justify-center"
@@ -73,11 +73,11 @@ const Education = () => {
                 }`}
               >
                 <div
-                  className={`text-content w-full h-full flex flex-col border-4
+                  className={`text-content w-full h-full flex flex-col
                   ${screenWidth < 1256 ? " justify-center" : ""}`}
                 >
                   <h3
-                    className={`text-2xl font-bold text-true-gray uppercase pb-1
+                    className={`text-2xl font-bold text-true-gray uppercase pt-5 pb-1
                   ${screenWidth < 1256 ? " text-center mt-5" : "text-start"}
                   ${screenWidth < 410 ? "text-2xl text-center mt-5" : ""}`}
                   >

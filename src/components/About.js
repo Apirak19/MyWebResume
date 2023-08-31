@@ -30,7 +30,7 @@ const About = () => {
   return (
     <section
       id="About"
-      className={`section w-full overflow-hidden px-0 pt-10
+      className={`section w-full overflow-hidden px-0 pt-10 pb-20
       ${screenWidth > 768 ? "pl-20 " : "pl-0"}
       bg-gradient-to-b from-cyan to-deep-green
       `}
