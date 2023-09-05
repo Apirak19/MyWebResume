@@ -53,7 +53,7 @@ const Navbar = () => {
             ? screenWidth < 768
                 ? "w-80 bg-white shadow-2xl"
                 : "w-56 bg-none"
-            : screenWidth < 768
+            : screenWidth <= 768
                 ? "w-0"
                 : ""
         } `}

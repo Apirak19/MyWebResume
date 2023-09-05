@@ -49,7 +49,7 @@ function App() {
 
                 <footer id="footer">
                     <div className="">
-                        <div className="text-xs p-1 uppercase font-extrabold">Thank you for visiting</div>
+                        <div className="text-xs py-1 uppercase font-extrabold">Thank you for visiting</div>
                     </div>
                 </footer>
             </div>

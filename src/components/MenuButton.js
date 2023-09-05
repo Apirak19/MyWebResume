@@ -14,7 +14,7 @@ const MenuButton = () => {
         <button className={`bg-gray-light text-gray-dark rounded-full flex items-center
          z-50 overflow-hidden
         hover:bg-true-gray hover:text-white cursor-pointer
-        ${screenWidth<768 ? "fixed p-2 right-3 top-3" : "hidden"}
+        ${screenWidth<=768 ? "fixed p-2 right-3 top-3" : "hidden"}
         `}
         data-tooltip-id="my-tooltip" data-tooltip-content="Hello world!"
         onClick={toggleNav}>
