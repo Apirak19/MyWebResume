@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { UseStateContext } from "../contexts/ContextProvider";
+import {Link} from 'react-scroll'
 
 import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
@@ -14,32 +15,32 @@ const Navbar = () => {
         {
             title: "Home",
             icon: <HomeIcon sx={{ fontSize: "2rem" }} />,
-            link: "#Home",
+            link: "Home",
         },
         {
             title: "About",
             icon: <PersonIcon sx={{ fontSize: "2rem" }} />,
-            link: "#About",
+            link: "About",
         },
         {
             title: "Education",
             icon: <SchoolIcon sx={{ fontSize: "2rem" }} />,
-            link: "#Education",
+            link: "Education",
         },
         {
             title: "Experience",
             icon: <BusinessCenterIcon sx={{ fontSize: "2rem" }} />,
-            link: "#Experience",
+            link: "Experience",
         },
         {
             title: "Skills",
             icon: <BuildIcon sx={{ fontSize: "2rem" }} />,
-            link: "#Skills",
+            link: "Skills",
         },
         {
             title: "Achievements",
             icon: <EmojiEventsIcon sx={{ fontSize: "2rem" }} />,
-            link: "#Achievements",
+            link: "Achievements",
         },
     ];
     return (
@@ -69,14 +70,17 @@ const Navbar = () => {
                         {list.map((item) => {
                             return (
                                 <li className="relative flex-nowrap my-2">
-                                    <a
-                                        href={item.link}
+                                    <Link
+                                        to={item.link}
                                         className={`nav-link group flex justify-start items-center
                     text-gray-dark text-sm bg-gray-light
                     ml-2 h-14 rounded-full
                     transition duration-300 
                     ${screenWidth >= 768 ? "p-2 m-1 w-14" : "w-64"}
                     hover:text-white hover:bg-true-gray hover:w-full`}
+                                        smooth={true}
+                                        offset={10}
+                                        duration={500}
                                     >
                                         <div
                                             className={`${
@@ -92,7 +96,7 @@ const Navbar = () => {
                                         >
                                             {item.title}
                                         </span>
-                                    </a>
+                                    </Link>
                                 </li>
                             );
                         })}

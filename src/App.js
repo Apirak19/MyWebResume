@@ -15,6 +15,9 @@ import Achievements from "./components/Achievements";
 import SentimentVerySatisfiedOutlinedIcon from "@mui/icons-material/SentimentVerySatisfiedOutlined";
 
 function App() {
+    const smoothScroll = (link) => {
+        link = document.querySelectorAll()
+    }
     return (
         <UseStateProvider>
             <div className="App font-mono box-border">

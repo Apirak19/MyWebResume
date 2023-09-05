@@ -51,7 +51,7 @@ const Skills = () => {
             id="Achievements"
             className={`section w-full overflow-hidden px-0 pt-10 pb-20
       ${screenWidth > 768 ? "pl-20 " : "pl-0"}
-      bg-gradient-to-b from-deep-amber to-gold
+      bg-gradient-to-b from-gold to-orangered
       `}
         >
             <h2 className="section-title text-5xl text-white font-bold uppercase pt-5">
