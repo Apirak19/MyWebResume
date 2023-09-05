@@ -1,5 +1,6 @@
 import React, {useContext, useState} from "react";
-import {UseStateContext} from "../contexts/ContextProvider";
+import { UseStateContext } from "../contexts/ContextProvider";
+import { Tooltip } from "react-tooltip";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -15,9 +16,12 @@ const MenuButton = () => {
         hover:bg-true-gray hover:text-white cursor-pointer
         ${screenWidth<768 ? "fixed p-2 right-3 top-3" : "hidden"}
         `}
+        data-tooltip-id="my-tooltip" data-tooltip-content="Hello world!"
         onClick={toggleNav}>
             {showNav ? <CloseIcon sx={{ fontSize: "2rem" }} /> : <MenuIcon sx={{ fontSize: "2rem" }} />}
+            <Tooltip id="my-tooltip" />
         </button>
+        
     );
 };
 
