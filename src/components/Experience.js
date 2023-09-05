@@ -24,8 +24,8 @@ const Experience = () => {
     return (
         <section
             id="Experience"
-            className={`section w-full overflow-hidden px-0 pt-10
-      ${screenWidth > 768 ? "pl-20 " : "pl-0"}
+            className={`section w-full overflow-hidden px-0 pt-10 
+            ${screenWidth > 768 ? "pl-20 pb-20" : "pl-0"}
       bg-gradient-to-b from-amber to-deep-amber
       `}
         >
@@ -50,7 +50,7 @@ const Experience = () => {
                         className={` 
               ${
         screenWidth < 1100
-            ? "self-center"
+            ? "flex flex-col items-center justify-center"
             : "row-span-1 col-span-1 w-full"
         }`}
                     >
@@ -73,15 +73,15 @@ const Experience = () => {
                         >
                             <h3
                                 className={`text-2xl font-bold text-true-gray uppercase pb-1
-                  ${screenWidth < 1100 ? " text-center mt-5" : ""}
-                  ${screenWidth < 410 ? "text-2xl text-center mt-5" : ""}`}
+                  ${screenWidth < 1100 ? "  mt-5" : ""}
+                  ${screenWidth < 410 ? "text-2xl  mt-5" : ""}`}
                             >
                 Foreign Relation Officer
                             </h3>
                             <h3
-                                className={`text-2xl font-bold text-true-gray uppercase pb-1
-                  ${screenWidth < 1100 ? " text-center" : ""}
-                  ${screenWidth < 410 ? "text-2xl text-center" : ""}`}
+                                className={`text-2xl font-bold text-start text-true-gray uppercase pb-1
+                  ${screenWidth < 1100 ? " " : ""}
+                  ${screenWidth < 410 ? "text-2xl " : ""}`}
                             >
                 Department of Social Development and Welfare
                             </h3>
