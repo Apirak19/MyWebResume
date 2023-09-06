@@ -30,9 +30,9 @@ const About = () => {
   return (
     <section
       id="About"
-      className={`section w-full overflow-hidden px-0 pt-10 pb-20
-      ${screenWidth > 768 ? "pl-20 " : "pl-0"}
-      bg-gradient-to-b from-cyan to-deep-green
+      className={`section w-full overflow-hidden px-0 pt-10 
+      ${screenWidth > 768 ? "pl-20 pb-20" : "pl-0"}
+            bg-gradient-to-b from-cyan to-deep-green
       `}
     >
       <h2 className="section-title text-5xl text-white font-bold uppercase pt-5">
@@ -40,14 +40,16 @@ const About = () => {
       </h2>
       <div
         className="section-bg m-5 p-5 rounded-xl shadow-2xl 
-        flex flex-col justify-center items-center
-        bg-white "
+                flex flex-col justify-center items-center
+                bg-white "
       >
         <div
           className={`content-type text-start 
-        ${
-          screenWidth < 1100 ? "flex flex-col" : "grid grid-rows-1 grid-cols-3"
-        }`}
+                    ${
+                      screenWidth < 1100
+                        ? "flex flex-col"
+                        : "grid grid-rows-1 grid-cols-3"
+                    }`}
         >
           <div className="row-span-1 col-span-1 w-full">
             <img src="images/portrait.jpg" className="w-full " alt="img" />
@@ -56,8 +58,12 @@ const About = () => {
           <div className="text-content row-span-1 col-span-2">
             <h3
               className={`text-4xl font-bold text-true-gray uppercase px-5 pb-3
-            ${screenWidth < 1100 ? " text-center mt-5" : ""}
-            ${screenWidth < 410 ? "text-2xl text-center mt-5" : ""}`}
+                            ${screenWidth < 1100 ? " text-center mt-5" : ""}
+                            ${
+                              screenWidth < 410
+                                ? "text-2xl text-center mt-5"
+                                : ""
+                            }`}
             >
               Web Developer
             </h3>
@@ -76,7 +82,7 @@ const About = () => {
             >
               {data1.map((item) => {
                 return (
-                  <li className="">
+                  <li key={item.name}>
                     <ChevronRightIcon />
                     <span className="font-extrabold">{item.title} </span>
                     <span>{item.content}</span>
