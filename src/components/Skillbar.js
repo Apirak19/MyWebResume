@@ -3,9 +3,9 @@ import React from "react";
 const Skillbar = (skills) => {
     const { title, level, color, img, percent, guage } = skills;
     return (
-        <div className="sm:w-full w-full p-2 bg-light-yellow rounded-4xl flex flex-col justify-center items-center shadow-2xl">
+        <div className="sm:w-full w-full p-2 bg-light-yellow rounded-4xl flex flex-col justify-center items-center shadow-photo hover:shadow-button cursor-pointer">
             <div className="skill-detail flex justify-center items-center w-full ">
-                <div className="skill-icon rounded-4xl w-32 h-32 m-2 bg-navajowhite shadow-xl">
+                <div className="skill-icon rounded-4xl w-32 h-32 m-2 bg-navajowhite shadow-button">
                     {img}
                 </div>
                 <div className="skill-text w-[65%] px-3 ">

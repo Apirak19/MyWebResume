@@ -74,7 +74,7 @@ const Navbar = () => {
                                         to={item.link}
                                         className={`nav-link group flex justify-start items-center
                     text-gray-dark text-sm bg-gray-light
-                    ml-2 h-14 rounded-full
+                    ml-2 h-14 rounded-full 
                     transition duration-300 cursor-pointer
                     ${screenWidth >= 768 ? "p-2 m-1 w-14" : "w-64"}
                     hover:text-white hover:bg-true-gray hover:w-full`}

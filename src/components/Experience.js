@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { UseStateContext } from "../contexts/ContextProvider";
+import { Tooltip } from "react-tooltip";
 
 const Experience = () => {
     const { screenWidth } = useContext(UseStateContext);
@@ -46,20 +47,23 @@ const Experience = () => {
             : "grid grid-cols-3"
         }`}
                 >
-                    <div
+                    <a
                         className={` 
               ${
         screenWidth < 1100
             ? "flex flex-col items-center justify-center"
             : "row-span-1 col-span-1 w-full"
-        }`}
+        }`} href=''
                     >
                         <img
                             src="/images/dsdw-logo.jpg"
-                            className="w-2/3 rounded-full shadow-2xl m-5"
+                            className="w-2/3 rounded-full shadow-photo m-5 hover:shadow-button"
                             alt=""
+                            data-tooltip-id="exp-img"
+                            data-tooltip-content={'Minister of Social Development and Human Security'}
                         />
-                    </div>
+                        <Tooltip id="exp-img" place="bottom"/>
+                    </a>
                     <div
                         className={`text-format
                 ${
@@ -72,20 +76,20 @@ const Experience = () => {
                             className={"text-content h-full flex flex-col items-start justify-center "}
                         >
                             <h3
-                                className={`text-2xl font-bold text-true-gray uppercase pb-1
+                                className={`text-2xl font-bold text-deep-pink uppercase pb-1
                   ${screenWidth < 1100 ? "  mt-5" : ""}
                   ${screenWidth < 410 ? "text-2xl  mt-5" : ""}`}
                             >
                 Foreign Relation Officer
                             </h3>
                             <h3
-                                className={`text-2xl font-bold text-start text-true-gray uppercase pb-1
+                                className={`text-2xl font-bold text-start text-deep-pink uppercase pb-1
                   ${screenWidth < 1100 ? " " : ""}
                   ${screenWidth < 410 ? "text-2xl " : ""}`}
                             >
                 Department of Social Development and Welfare
                             </h3>
-                            <h3 className="text-2xl font-bold text-gray-dark mb-3">
+                            <h3 className="text-2xl font-bold text-deep-pink mb-3">
                 (2020-present)
                             </h3>
 

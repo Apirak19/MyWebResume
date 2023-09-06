@@ -5,6 +5,7 @@ import "./App.css";
 
 // header
 import MenuButton from "./components/MenuButton";
+import ToTop from "./components/ToTop";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -23,6 +24,7 @@ function App() {
             <div className="App font-mono box-border">
                 <aside>
                     <MenuButton />
+                    <ToTop/>
                     <Navbar />
                 </aside>
         

@@ -46,6 +46,7 @@ module.exports = {
             "light-green": "#8bc34a",
             "green-accent": "#00c853",
             "light-green-accent": "#9bebef",
+            veridian: '#009698',
 
             // Teals
             teal: "#008080",
@@ -119,6 +120,16 @@ module.exports = {
                 // Custom screen size
                 "2xl": { min: "1536px" },
             },
+            boxShadow: {
+                'button': [
+                  'rgba(0, 0, 0, 0.25) 0px 54px 55px',
+                  'rgba(0, 0, 0, 0.12) 0px -12px 30px',
+                  'rgba(0, 0, 0, 0.12) 0px 4px 6px',
+                  'rgba(0, 0, 0, 0.17) 0px 12px 13px',
+                  'rgba(0, 0, 0, 0.09) 0px -3px 5px',
+                ],
+                'photo': ['0 3px 6px 0 #00000029, 0 3px 6px 0 #0000003A'],
+              },
         },
     },
 };
