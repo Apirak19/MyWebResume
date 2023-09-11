@@ -69,7 +69,8 @@ const Navbar = () => {
           `}>
                         {list.map((item) => {
                             return (
-                                <li className="relative flex-nowrap my-2">
+                                <li className="relative flex-nowrap my-2"
+                                key={item.title}>
                                     <Link
                                         to={item.link}
                                         className={`nav-link group flex justify-start items-center

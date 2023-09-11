@@ -31,7 +31,7 @@ const About = () => {
     <section
       id="About"
       className={`section w-full overflow-hidden px-0 pt-10 
-      ${screenWidth > 768 ? "pl-20 pb-20" : "pl-0"}
+      ${screenWidth > 768 ? "pl-20 pb-20" : "pl-0 pb-10"}
             bg-gradient-to-b from-cyan to-deep-green
       `}
     >
@@ -77,7 +77,7 @@ const About = () => {
             </p>
             <ul
               className={`list py-2 tracking-tighter
-            ${screenWidth < 1100 ? "px-0" : "px-10"}
+            ${screenWidth < 1100 ? "px-0 py-2" : "px-10"}
             ${screenWidth < 375 ? "text-sm" : "text-base"}`}
             >
               {data1.map((item) => {
@@ -92,7 +92,7 @@ const About = () => {
             </ul>
             <p
               className={`paragraph tracking-tighter
-            ${screenWidth < 1100 ? "px-0" : "px-5"}
+            ${screenWidth < 1100 ? "px-0 py-2" : "px-5"}
             ${screenWidth < 375 ? "text-sm" : "text-base"}`}
             >
               Driven by a passion for technology, I seek to leverage my

@@ -10,7 +10,7 @@ const ToTop = () => {
         className="bg-gray-light text-gray-dark rounded-full flex items-center
          z-50 overflow-hidden
         hover:bg-true-gray hover:text-white cursor-pointer
-        fixed p-2 right-3 bottom-3"
+        fixed p-2 right-3 bottom-8 shadow-button"
         data-tooltip-id="my-tooltip"
         data-tooltip-content="Back to Top"
       >

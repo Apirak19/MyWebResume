@@ -11,6 +11,9 @@ import { Tooltip } from "react-tooltip";
 
 const Home = () => {
   const { screenWidth } = useContext(UseStateContext);
+  const NameText = "Apirak Fakin"
+  console.log(NameText);
+
   const socialLink = [
     {
       title: "Facebook",
@@ -38,6 +41,8 @@ const Home = () => {
       icon: <LinkedInIcon sx={{ fontSize: "3rem" }} />,
     },
   ];
+  
+  
   return (
     <section
       id="Home"
@@ -51,7 +56,7 @@ const Home = () => {
       </h1>
 
       <div className="home-contacts">
-        <h1 className="font-bold text-black p-5 2xl:text-7xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl">
+        <h1 className="NameText font-bold text-black p-5 2xl:text-7xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl">
           Apirak Fakin
         </h1>
 
@@ -60,6 +65,7 @@ const Home = () => {
             return (
               <>
                 <a
+                  key={item.title}
                   href={item.link}
                   className="mx-2 cursor-pointer"
                   data-tooltip-id="socialMedia"
