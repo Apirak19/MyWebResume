@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { UseStateContext } from "../contexts/ContextProvider";
 import DynamicText from "./DynamicText";
 
@@ -11,8 +11,13 @@ import { Tooltip } from "react-tooltip";
 
 const Home = () => {
   const { screenWidth } = useContext(UseStateContext);
+  const [hoverIndex, setHoverIndex] = useState(null)
+  
   const NameText = "Apirak Fakin"
-  console.log(NameText);
+  const NameString = NameText.split("")
+  console.log("name:", NameString);
+  const ShowName = NameString.join("")
+  console.log("linkedname:", ShowName);
 
   const socialLink = [
     {
@@ -56,8 +61,18 @@ const Home = () => {
       </h1>
 
       <div className="home-contacts">
-        <h1 className="NameText font-bold text-black p-5 2xl:text-7xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl">
-          Apirak Fakin
+        <h1 className={`NameText font-bold text-black p-5 
+        2xl:text-7xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl`}>
+          {NameString.map((letter, index) => (
+            <span
+              key={index}
+              className={`inline-block cursor-pointer m-1 transition-transform ease-out duration-75 ${hoverIndex === index ? `transform scale-150` : ``}`}
+              onMouseOver={()=>setHoverIndex(index)}
+              onMouseOut={()=>setHoverIndex(null)}
+          >
+            {letter}
+          </span>
+          ))}
         </h1>
 
         <div className="social-links flex justify-center p-5">
