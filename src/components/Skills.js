@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { UseStateContext } from "../contexts/ContextProvider";
 import Skillbar from "./Skillbar";
 
@@ -10,6 +10,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Skills = () => {
     const { screenWidth } = useContext(UseStateContext);
+    const [hoverSkillIndex, setHoverSkillIndex] = useState(null);
     const skills = [
         {
             title: "JavaScript",
@@ -78,9 +79,13 @@ const Skills = () => {
             : "flex justify-center items-center flex-wrap"
         }`}
                 >
-                    {skills.map((item) => {
+                    {skills.map((item, index) => {
                         return (
-                            <div className="m-2">
+                            <div
+                                className={`m-2 transition-transform ease-out ${hoverSkillIndex === index ? `transform scale-105` : ``}`}
+                                onMouseOver={()=>setHoverSkillIndex(index)}
+                                onMouseOut={()=>setHoverSkillIndex(null)}
+                            >
                                 <Skillbar
                                     title={item.title}
                                     level={item.level}
