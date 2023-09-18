@@ -11,7 +11,8 @@ import { Tooltip } from "react-tooltip";
 
 const Home = () => {
   const { screenWidth } = useContext(UseStateContext);
-  const [hoverIndex, setHoverIndex] = useState(null)
+  const [hoverTextIndex, setHoverTextIndex] = useState(null)
+  const [hoverIconIndex, setHoverIconIndex] = useState(null)
   
   const NameText = "Apirak Fakin"
   const NameString = NameText.split("")
@@ -66,9 +67,9 @@ const Home = () => {
           {NameString.map((letter, index) => (
             <span
               key={index}
-              className={`inline-block cursor-pointer m-1 transition-transform ease-out duration-75 ${hoverIndex === index ? `transform scale-150` : ``}`}
-              onMouseOver={()=>setHoverIndex(index)}
-              onMouseOut={()=>setHoverIndex(null)}
+              className={`inline-block cursor-pointer m-1 transition-transform ease-out duration-75 ${hoverTextIndex === index ? `transform scale-150` : ``}`}
+              onMouseOver={()=>setHoverTextIndex(index)}
+              onMouseOut={()=>setHoverTextIndex(null)}
           >
             {letter}
           </span>
@@ -76,13 +77,15 @@ const Home = () => {
         </h1>
 
         <div className="social-links flex justify-center p-5">
-          {socialLink.map((item) => {
+          {socialLink.map((item, index) => {
             return (
               <>
                 <a
                   key={item.title}
                   href={item.link}
-                  className="mx-2 cursor-pointer"
+                  className={`mx-2 cursor-pointer transition-transform ease-out ${hoverIconIndex === index ? ` transform scale-150` : ``}`}
+                  onMouseOver={()=>setHoverIconIndex(index)}
+                  onMouseOut={()=>setHoverIconIndex(null)}
                   data-tooltip-id="socialMedia"
                         data-tooltip-content={item.title}
                         target="_blank"
