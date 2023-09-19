@@ -52,7 +52,13 @@ const About = () => {
                     }`}
         >
           <div className="row-span-1 col-span-1 w-full">
-            <img src="images/portrait.jpg" className="w-full " alt="img" />
+            <img
+              src="images/portrait.jpg"
+              className={`w-full ${
+                screenWidth < 1100 ? "p-3 " : ""
+              }`}
+              alt="img"
+            />
           </div>
 
           <div className="text-content row-span-1 col-span-2">
