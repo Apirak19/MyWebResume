@@ -54,7 +54,7 @@ const About = () => {
           <div className="row-span-1 col-span-1 w-full">
             <img
               src="images/portrait.jpg"
-              className={`w-full ${
+              className={`w-full cursor-pointer transition-transform ease-out ${
                 screenWidth < 1100 ? "p-3 " : ""
               }`}
               alt="img"
