@@ -32,14 +32,13 @@ const About = () => {
       id="About"
       className={`section w-full overflow-hidden px-0 pt-10 
       ${screenWidth > 768 ? "pl-20 pb-20" : "pl-0 pb-10"}
-            bg-gradient-to-b from-cyan to-deep-green
       `}
     >
       <h2 className="section-title text-5xl text-white font-bold uppercase pt-5">
         About
       </h2>
       <div
-        className="section-bg m-5 p-5 rounded-xl shadow-2xl 
+        className="section-bg m-5 p-5 rounded-xl shadow-md 
                 flex flex-col justify-center items-center
                 bg-white "
       >

@@ -52,7 +52,7 @@ const Home = () => {
   return (
     <section
       id="Home"
-      className="flex flex-col justify-center w-full h-screen overflow-hidden py-16 px-0 bg-gradient-to-b from-teal-accent to-cyan
+      className="flex flex-col justify-center w-full h-screen overflow-hidden py-16 px-0
       "
     >
       <DynamicText />

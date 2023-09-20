@@ -16,24 +16,13 @@ const Education = () => {
       img: "images/SU.png",
       color: "veridian",
       link: "https://www.su.ac.th/th/index.php",
-    },
-    {
-      name: "Phrapathom Witthayalai School",
-      gradYear: "(2012-2017)",
-      grad: "High School Diploma",
-      major: "Science and Mathematics Program",
-      gpa: "3.39",
-      img: "images/PT.png",
-      color: "blue-accent",
-      link: "http://phrapathom.ac.th",
-    },
+    }
   ];
   return (
     <section
       id="Education"
       className={`section w-full overflow-hidden px-0 pt-10
       ${screenWidth > 768 ? "pl-20 " : "pl-0"}
-      bg-gradient-to-b from-deep-green to-amber
       `}
     >
       <h2 className="section-title text-5xl text-white font-bold uppercase pt-5">
@@ -43,7 +32,7 @@ const Education = () => {
       {eduData.map((item) => {
         return (
           <div
-            className="section-bg m-5 p-5 rounded-xl shadow-2xl 
+            className="section-bg m-5 p-5 rounded-xl shadow-md
           flex flex-col justify-center items-center
           bg-white "
           >
@@ -104,7 +93,7 @@ const Education = () => {
                     {item.gradYear}
                   </h4>
                   <div
-                    className={`flex flex-col 
+                    className={`flex flex-col pb-5 
                   ${screenWidth < 1256 ? " justify-center" : "text-start"}
                   ${screenWidth < 600 ? " text-base" : "text-xl font-extrabold"}
                   `}
